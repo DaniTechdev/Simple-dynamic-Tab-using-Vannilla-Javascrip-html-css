@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1>Setting</h1>
+        <div class="content">
+
+
+            <ul>
+                <li class="tab-active" onclick="changeTab(event,'profile')">Profile</li>
+                <li onclick="changeTab(event,'security')">Security</li>
+                <li onclick="changeTab(event,'notification')">Notification</li>
+                <li onclick="changeTab(event,'setting')">Setting</li>
+            </ul>
+
+            <div class="tab-contents">
+                <div class="tab-content active" id="profile">
+                    <h1>Profile</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                </div>
+
+                <div class="tab-content" id="security">
+                    <h1>Security</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                </div>
+
+                <div class="tab-content" id="notification">
+                    <h1>Notification</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                </div>
+
+                <div class="tab-content" id="setting">
+                    <h1>Setting</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum asperiores porro nemo fugit
+                        repellat! Recusandae autem corrupti voluptate nihil quod dolorem reiciendis nobis maiores,
+                        exercitationem ipsam earum doloremque dignissimos!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // let tabContent = document.querySelectorAll(".tab-content")
+        let tabContents = document.getElementsByClassName("tab-content")
+        let tabLists = document.getElementsByTagName("li")
+
+
+        // console.log("tabLists", tabLists);
+
+        function changeTab(e, tabname) {
+
+            // console.log("tabname", tabname);
+            // console.log("event", e);
+
+
+
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active")
+
+                //styling the clicked link
+                tabLists[i].style.backgroundColor = "gray"
+                tabLists[i].style.color = "white"
+                tabLists[i].style.border = "1px solid gray"
+            }
+
+
+            document.getElementById(tabname).className += " active"
+
+            e.currentTarget.style.backgroundColor = "white"
+
+            e.currentTarget.style.color = "black"
+            e.currentTarget.style.borderBottom = "none"
+
+
+
+
+        }
+
+
+
+
+
+        // console.log("tabContent", tabContent);
+        // console.log("tabContentByName", tabContentByName);
+
+
+    </script>
+</body>
+
+</html>

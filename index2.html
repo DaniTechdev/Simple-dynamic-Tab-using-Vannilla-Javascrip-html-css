@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style2.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Setting</h1>
+        <div class="content">
+            <ul>
+                <li onclick="changeTab(event,'profile')">Profile</li>
+                <li onclick="changeTab(event,'security')">Security</li>
+                <li onclick="changeTab(event,'notification')">Notification</li>
+                <li onclick="changeTab(event,'setting')">Setting</li>
+            </ul>
+            <div class="tab-contents ">
+
+                <div class="tab-content active" id="profile">
+                    <h1>Profile</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                </div>
+
+                <div class="tab-content " id="security">
+                    <h1>Security</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                </div>
+
+                <div class="tab-content" id="notification">
+                    <h1>Notification</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                </div>
+
+                <div class="tab-content" id="setting">
+                    <h1>Setting</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptate molestias cum ducimus
+                        debitis
+                        dolore maxime unde cupiditate, voluptatem rem, veniam sunt porro, incidunt sapiente numquam
+                        nobis
+                        sint
+                        repellat soluta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+        let tabContents = document.getElementsByClassName('tab-content');
+
+        // console.log("tabContents", tabContents);
+
+        let tabLists = document.getElementsByTagName("li")
+
+
+        console.log("tabContents", tabContents);
+
+
+        function changeTab(e, tabName) {
+
+            // console.log("tabName", tabName);
+
+
+            for (let i = 0; i < tabContents.length; i++) {
+
+                tabContents[i].classList.remove("active");
+
+                //styling the clicked link
+                tabLists[i].style.backgroundColor = "gray"
+                tabLists[i].style.color = "white"
+                tabLists[i].style.border = "1px solid gray"
+
+                // console.log("tabContents[i].classList", tabContents[i]);
+
+            }
+
+
+            //Since ID is unique, we can now use each ID to add back the class once we clicked
+            document.getElementById(tabName).className += " active",
+
+                e.currentTarget.style.backgroundColor = "white"
+            e.currentTarget.style.color = "black"
+            e.currentTarget.style.borderBottom = "none"
+
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
